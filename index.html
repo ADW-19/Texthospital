@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextHospital - AI Text Detection Based On NLP</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path stroke='%230A2463' stroke-width='2' fill='none' d='M12 2L2 7v10l10 5 10-5V7L12 2z'/><path stroke='%230A2463' stroke-width='2' fill='none' d='M12 12l-5-3M12 12v5M12 12l5-3'/></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="zh-CN">简体</button>
+        <button class="lang-btn" data-lang="zh-TW">繁體</button>
+        <button class="lang-btn" data-lang="en">English</button>
+    </div>
+    <header class="fixed-header">
+        <div class="logo-container">
+            <span class="logo-text">Text</span>
+            <span class="logo-text">Hospital</span>
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/>
+                <path d="M12 12l-5-3M12 12v5M12 12l5-3"/>
+            </svg>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="logo-container hero-logo">
+                <span class="logo-text logo-left">Text</span>
+                <span class="logo-text logo-right">Hospital</span>
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/>
+                    <path d="M12 12l-5-3M12 12v5M12 12l5-3"/>
+                </svg>
+            </div>
+            <p class="subtitle">AI Text Detection Lab</p>
+            <div class="button-group">
+                <button class="btn btn-primary">检测原理</button>
+                <button class="btn btn-accent">立即检测</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="detection-area">
+            <div class="input-section">
+                <div class="input-container">
+                    <div class="text-input-wrapper">
+                        <textarea class="text-input" placeholder="输入待检测文本..."></textarea>
+                        <button class="submit-btn">
+                            发送
+                            <svg viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="file-upload">
+                        <span>📁</span>
+                        <span>拖放文件到此处</span>
+                    </div>
+                </div>
+            </div>
+            <div class="result-section">
+                <div class="result-display">
+                <div class="loading-spinner"></div>
+                    <div class="ai-percentage">
+                        <span class="percentage-value">0</span>%
+                        <p class="default-message">请输入文本进行检测</p>
+                    </div>
+                    <div class="visualization"></div>
+                    <div class="highlighted-text"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="principles-section" id="principles">
+        <h2 data-translate="principles_title">检测原理</h2>
+        <div class="principles-cards">
+            <div class="principle-card">
+                <h3 data-translate="tech_title">技术原理</h3>
+                <div class="card-content">
+                    <p data-translate="tech_content">我们采用TF-IDF特征提取结合多种机器学习算法（包括随机森林、SVM和神经网络）的集成方法，通过分析文本的词汇分布、句法模式和统计特征来识别AI生成内容...</p>
+                </div>
+            </div>
+            <div class="principle-card">
+                <h3 data-translate="papers_title">相关论文</h3>
+                <div class="card-content">
+                    <ul>
+                        <li data-translate="paper1">"Detecting AI-Generated Text" (NeurIPS 2023)</li>
+                        <li data-translate="paper2">"BERT-based Detection Model" (ACL 2024)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="principle-card">
+                <h3 data-translate="achievements_title">比赛成果</h3>
+                <div class="card-content">
+                    <ul>
+                        <li data-translate="achievement1">SemEval 2023 AI检测挑战赛第一名</li>
+                        <li data-translate="achievement2">Kaggle AI文本检测竞赛金牌</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2 data-translate="team_title">研究团队</h2>
+        <div class="team-cards">
+            <div class="team-card">
+                <h3 data-translate="team_member1_name">王彦祺 (Andy Yanqi Wang)</h3>
+                <div class="team-content">
+                    <p data-translate="team_member1_desc">中国国籍，TextHospital创始人，毕业于安徽财经大学，自动化系统优化工程师，人工智能工程师，研究方向：数据科学，机器学习与深度学习，自然语言处理</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <h3 data-translate="team_member2_name">李宇航 (Yvhang Lee)</h3>
+                <div class="team-content">
+                    <p data-translate="team_member2_desc">韩国国籍，TextHospital创始人，现就读于北京交通大学，硕士研究生，研究方向：运筹学与优化分析，系统工程，交通工程</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <h3 data-translate="team_member3_name">武明佳</h3>
+                <div class="team-content">
+                    <p data-translate="team_member3_desc">中国国籍，TextHospital创始人，毕业于安徽财经大学，数据分析师，研究方向：企业管理，管理统计与计量经济</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 TextHospital AI Detection Lab. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
