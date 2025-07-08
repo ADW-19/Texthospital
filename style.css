@@ -519,6 +519,14 @@ body {
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
 }
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.principle-card {
+    transition: transform 0.3s ease;
+}
 
 .card-content {
     line-height: 1.6;
@@ -539,4 +547,33 @@ body {
     .header {
         padding-top: 4rem;
     }
+}
+
+/* 确保卡片是相对定位，以便子元素绝对定位 */
+.principle-card,
+.team-card {
+    position: relative;
+    padding-bottom: 2rem; /* 为底部的“查看详情”留出空间 */
+}
+
+/* 仅针对原理卡片和团队卡片的“查看详情”链接 */
+.principle-card .detail-link,
+.team-card .detail-link {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    color: #0A2463;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* 悬浮效果 */
+.principle-card .detail-link:hover,
+.team-card .detail-link:hover {
+    color: #0A2463;
+    background-color: #ffffff;
 }

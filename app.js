@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Translation data
     const translations = {
         'zh-CN': {
+            'view_details':'查看详情',
             'principles_title': '检测原理',
             'tech_title': '技术原理',
             'tech_content': '我们采用TF-IDF特征提取与多种机器学习模型集成学习的方法，结合深度学习模型，通过分析文本的统计特征和语义模式来识别AI生成内容...',
@@ -18,14 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
             'input_placeholder': '输入待检测文本...',
             'team_title': '研究团队',
             'team_member1_name': '王彦祺 (Andy Yanqi Wang)',
-            'team_member1_desc': '中国大陆籍，TextHospital创始人，毕业于安徽财经大学，自动化系统优化工程师，人工智能工程师，研究方向：数据科学，机器学习与深度学习，自然语言处理',
+            'team_member1_desc': '来自湖南长沙，毕业于安徽财经大学，中国银联自动化系统优化工程师，人工智能工程师，研究方向：数据科学，机器学习与深度学习，自然语言处理',
             'team_member2_name': '李宇航 (Yvhang Lee)',
-            'team_member2_desc': '中国台湾籍，TextHospital创始人，现就读于北京交通大学，硕士研究生，研究方向：运筹学与优化分析，系统工程，交通工程',
+            'team_member2_desc': '来自安徽合肥，北京交通大学硕士研究生，研究方向：运筹学与优化分析，系统科学与系统工程，交通工程',
             'team_member3_name': '武明佳 (Mingjia Wu)',
-            'team_member3_desc': '中国大陆籍，TextHospital创始人，毕业于安徽财经大学，数据分析师，研究方向：企业管理，管理统计与计量经济'
+            'team_member3_desc': '来自山西太原，毕业于安徽财经大学，追觅科技数据分析师，研究方向：企业管理，管理统计与计量经济'
       
         },
         'zh-TW': {
+            'view_details':'查看詳情',
             'principles_title': '檢測原理',
             'tech_title': '技術原理',
             'tech_content': '我們採用TF-IDF特徵提取與多種機器學習模型集成學習的方法，結合深度學習模型，通過分析文本的統計特徵和語義模式來識別AI生成內容...',
@@ -42,14 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
             'input_placeholder': '輸入待檢測文本...',
             'team_title': '研究團隊',
             'team_member1_name': '王彥祺 (Andy Yanqi Wang)',
-            'team_member1_desc': '中國大陸籍，TextHospital創始人，畢業於安徽財經大學，自動化系統優化工程師，人工智能工程師，研究方向：數據科學，機器學習與深度學習，自然語言處理',
+            'team_member1_desc': '來自湖南長沙，畢業於安徽財經大學，中國銀聯自動化系統優化工程師，人工智能工程師，研究方向：數據科學，機器學習與深度學習，自然語言處理',
             'team_member2_name': '李宇航 (Yvhang Lee)',
-            'team_member2_desc': '中國台灣籍，TextHospital創始人，現就讀於北京交通大學，碩士研究生，研究方向：運籌學與優化分析，系統工程，交通工程',
+            'team_member2_desc': '來自安徽合肥，北京交通大學碩士研究生，研究方向：運籌學與優化分析，系統科學與系統工程',
             'team_member3_name': '武明佳 (Mingjia Wu)',
-            'team_member3_desc': '中國大陸籍，TextHospital創始人，畢業於安徽財經大學，數據分析師，研究方向：企業管理，管理統計與計量經濟'
+            'team_member3_desc': '來自山西太原，畢業於安徽財經大學，追覓科技數據分析師，研究方向：企業管理，管理統計與計量經濟'
        
         },
         'en': {
+            'view_details':'View Details',
             'principles_title': 'Detection Principles',
             'tech_title': 'Technical Principles',
             'tech_content': 'We use TF-IDF feature extraction combined with ensemble learning of multiple machine learning models to identify AI-generated content by analyzing statistical features and semantic patterns...',
@@ -65,12 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'file_upload': 'or drag and drop file here',
             'input_placeholder': 'Enter text to analyze...',
             'team_title': 'Research Team',
-            'team_member1_name': 'Yanqi Wang (Andy)',
-            'team_member1_desc': 'Chinese, Founder of TextHospital, graduated from Anhui University of Finance and Economics, Automation System Optimization Engineer, AI Engineer. Research areas: Data Science, Machine Learning & Deep Learning, Natural Language Processing',
-            'team_member2_name': 'Yuhang Lee',
-            'team_member2_desc': 'Taiwanese, Founder of TextHospital, currently studying at Beijing Jiaotong University (Master\'s degree). Research areas: Operations Research & Optimization Analysis, Systems Engineering, Transportation Engineering',
+            'team_member1_name': 'Andy Yanqi Wang',
+            'team_member1_desc': 'From Changsha, Hunan, graduated from Anhui University of Finance and Economics, China UnionPay Automation System Optimization Engineer, Artificial Intelligence Engineer, research direction: Data Science, Machine Learning and Deep Learning, Natural Language Processing. Research areas: Data Science, Machine Learning & Deep Learning, Natural Language Processing',
+            'team_member2_name': 'Yvhang Lee',
+            'team_member2_desc': 'From Hefei, Anhui, master student at Beijing Jiaotong University, with research directions in Operations Research and Optimization Analysis, Systems Science and Systems Engineering',
             'team_member3_name': 'Mingjia Wu',
-            'team_member3_desc': 'Chinese, Founder of TextHospital, graduated from Anhui University of Finance and Economics, Data Analyst. Research areas: Business Management, Managerial Statistics & Econometrics'
+            'team_member3_desc': 'From Taiyuan, Shanxi, graduated from Anhui University of Finance and Economics, pursued as a technology data analyst with research interests in enterprise management, management statistics, and econometrics'
 
           },
     };

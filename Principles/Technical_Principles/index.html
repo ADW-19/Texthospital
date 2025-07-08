@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextHospital - AI Text Detection Based On NLP</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path stroke='%230A2463' stroke-width='2' fill='none' d='M12 2L2 7v10l10 5 10-5V7L12 2z'/><path stroke='%230A2463' stroke-width='2' fill='none' d='M12 12l-5-3M12 12v5M12 12l5-3'/></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- <div class="language-switcher">
+        <button class="lang-btn active" data-lang="zh-CN">简体</button>
+        <button class="lang-btn" data-lang="zh-TW">繁體</button>
+        <button class="lang-btn" data-lang="en">English</button>
+    </div> -->
+    <header class="fixed-header">
+        <div class="logo-container">
+            <span class="logo-text">Text</span>
+            <span class="logo-text">Hospital</span>
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/>
+                <path d="M12 12l-5-3M12 12v5M12 12l5-3"/>
+            </svg>
+        </div>
+    </header>
+
+<section class="principles-section" id="principles">
+    <h2 data-translate="principles_title">技术原理详解</h2>
+    <div class="principle-detail">
+        <h3 data-translate="tech_title">基于NLP的AI文本检测技术</h3>
+        <div class="article-content">
+            
+            <p data-translate="tech_content">TextHospital采用先进的自然语言处理(NLP)技术来检测AI生成的文本内容。我们的系统通过分析文本的多维度特征，能够准确识别由GPT、Claude等大型语言模型生成的文本。</p>
+            
+            <h4 data-translate="core_methods">核心检测方法</h4>
+            <ul>
+                <li data-translate="method1"><strong>词频统计分析</strong>：AI生成的文本在词频分布上与人类写作存在显著差异</li>
+                <li data-translate="method2"><strong>语义连贯性检测</strong>：评估文本在长距离依赖关系上的连贯程度</li>
+                <li data-translate="method3"><strong>句法模式识别</strong>：分析句子结构的复杂性和多样性</li>
+                <li data-translate="method4"><strong>风格一致性检测</strong>：检测文本在不同段落间的风格变化</li>
+            </ul>
+
+            <h4 data-translate="model_architecture">模型架构</h4>
+            <ul>
+                <p>我们的检测系统采用集成学习框架，结合了以下技术：</p>
+                <ol>
+                    <li data-translate="architecture1">基于TF-IDF的特征提取器</li>
+                    <li data-translate="architecture2">采用XGBoost与RandomForest等多种机器学习算法进行训练</li>
+                    <li data-translate="architecture3">采用多模型集成框架提升鲁棒性</li>
+                </ol> 
+            </ul>
+
+
+            <h3 data-translate="tech_advantages">技术优势</h3>
+            <div class="tech-advantages">
+                <div class="advantage-item">
+                    <h5 data-translate="advantage1">高准确率</h5>
+                    <p>在公开测试集上达到77.8%的准确率</p>
+                </div>
+                <div class="advantage-item">
+                    <h5 data-translate="advantage2">目前仅支持英语</h5>
+                    <p>目前仅支持英语文本进行检测</p>
+                </div>
+                <div class="advantage-item">
+                    <h5 data-translate="advantage3">实时分析</h5>
+                    <p>平均响应时间低于300ms</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer class="footer">
+        <p>© 2025 TextHospital AI Detection Lab. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
