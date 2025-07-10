@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'team_member1_name': '王彦祺 (Andy Yanqi Wang)',
             'team_member1_desc': '来自湖南长沙，毕业于安徽财经大学，中国银联自动化系统优化工程师，人工智能工程师，研究方向：数据科学，机器学习与深度学习，自然语言处理',
             'team_member2_name': '李宇航 (Yvhang Lee)',
-            'team_member2_desc': '来自安徽合肥，北京交通大学硕士研究生，研究方向：运筹学与优化分析，系统科学与系统工程，交通工程',
+            'team_member2_desc': '来自安徽合肥，北京交通大学硕士研究生，研究方向：运筹学与优化分析，系统科学与系统工程',
             'team_member3_name': '武明佳 (Mingjia Wu)',
             'team_member3_desc': '来自山西太原，毕业于安徽财经大学，追觅科技数据分析师，研究方向：企业管理，管理统计与计量经济'
       
