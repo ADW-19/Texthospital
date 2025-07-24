@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'view_details':'查看详情',
             'principles_title': '检测原理',
             'tech_title': '技术原理',
-            'tech_content': '我们采用TF-IDF特征提取与多种机器学习模型集成学习的方法，结合深度学习模型，通过分析文本的统计特征和语义模式来识别AI生成内容...',
+            'tech_content': '我们采用TF-IDF特征提取结合数据增强与对抗训练的方法，集成多种机器学习模型，并通过深度学习模型分析文本的统计特征和语义模式，以更鲁棒地识别AI生成内容...',
             'papers_title': '相关论文',
             'paper1': '"基于集成学习的AI生成文本精准检测探究" (CCKS2025)',
             'paper2': '"基于AI生成文本的数据挖掘与分析" (CCKS2025)',
             'achievements_title': '比赛成果',
-            'achievement1': '阿里云天池大数据竞赛CCKS2025-大模型生成文本检测 Top10',
+            'achievement1': '阿里云天池大数据竞赛CCKS2025-大模型生成文本检测 71/1093',
             'achievement2': '中科院CCKS2025学术会议论文集',
             'detect_btn': '立即检测',
             'principles_btn': '检测原理',
@@ -24,18 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
             'team_member2_desc': '来自安徽合肥，北京交通大学硕士研究生，研究方向：运筹学与优化分析，系统科学与系统工程',
             'team_member3_name': '武明佳 (Mingjia Wu)',
             'team_member3_desc': '来自山西太原，毕业于安徽财经大学，追觅科技数据分析师，研究方向：企业管理，管理统计与计量经济'
-      
         },
         'zh-TW': {
             'view_details':'查看詳情',
             'principles_title': '檢測原理',
             'tech_title': '技術原理',
-            'tech_content': '我們採用TF-IDF特徵提取與多種機器學習模型集成學習的方法，結合深度學習模型，通過分析文本的統計特徵和語義模式來識別AI生成內容...',
+            'tech_content': '我們採用TF-IDF特徵提取結合數據增強與對抗訓練的方法，集成多種機器學習模型，並通過深度學習模型分析文本的統計特徵和語義模式，以更穩健地識別AI生成內容...',
             'papers_title': '相關論文',
             'paper1': '"基於集成學習的AI生成文本精準檢測探究" (CCKS2025)',
             'paper2': '"基於AI生成文本的數據挖掘與分析" (CCKS2025)',
             'achievements_title': '比賽成果',
-            'achievement1': '阿里云天池大數據競賽CCKS2025-大模型生成文本檢測 Top10',
+            'achievement1': '阿里云天池大數據競賽CCKS2025-大模型生成文本檢測 71/1093',
             'achievement2': '中科院CCKS2025學術會議論文集',
             'detect_btn': '立即檢測',
             'principles_btn': '檢測原理',
@@ -49,18 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
             'team_member2_desc': '來自安徽合肥，北京交通大學碩士研究生，研究方向：運籌學與優化分析，系統科學與系統工程',
             'team_member3_name': '武明佳 (Mingjia Wu)',
             'team_member3_desc': '來自山西太原，畢業於安徽財經大學，追覓科技數據分析師，研究方向：企業管理，管理統計與計量經濟'
-       
         },
         'en': {
             'view_details':'View Details',
             'principles_title': 'Detection Principles',
             'tech_title': 'Technical Principles',
-            'tech_content': 'We use TF-IDF feature extraction combined with ensemble learning of multiple machine learning models to identify AI-generated content by analyzing statistical features and semantic patterns...',
+            'tech_content': 'We employ TF-IDF feature extraction combined with data augmentation and adversarial training, integrating multiple machine learning models and deep learning techniques to analyze statistical features and semantic patterns for robust AI-generated content detection...',
             'papers_title': 'Related Papers',
             'paper1': '"Precision Detection of AI-Generated Text Using Ensemble Learning" (CCKS2025)',
             'paper2': '"Data Mining and Analysis of AI-Generated Text" (CCKS2025)',
             'achievements_title': 'Competition Achievements',
-            'achievement1': 'Top10 in Alibaba Tianchi Big Data Competition CCKS2025 - LLM Generated Text Detection',
+            'achievement1': 'Ranked 71/1093 in Alibaba Tianchi Big Data Competition CCKS2025 - LLM Generated Text Detection',
             'achievement2': 'Published in CCKS2025 Academic Conference Proceedings',
             'detect_btn': 'Detect Now',
             'principles_btn': 'Principles',
@@ -69,13 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'input_placeholder': 'Enter text to analyze...',
             'team_title': 'Research Team',
             'team_member1_name': 'Andy Yanqi Wang',
-            'team_member1_desc': 'From Changsha, Hunan, graduated from Anhui University of Finance and Economics, China UnionPay Automation System Optimization Engineer, Artificial Intelligence Engineer, research direction: Data Science, Machine Learning and Deep Learning, Natural Language Processing. Research areas: Data Science, Machine Learning & Deep Learning, Natural Language Processing',
+            'team_member1_desc': 'From Changsha, Hunan, graduated from Anhui University of Finance and Economics, China UnionPay Automation System Optimization Engineer, Artificial Intelligence Engineer, research direction: Data Science, Machine Learning and Deep Learning, Natural Language Processing',
             'team_member2_name': 'Yvhang Lee',
             'team_member2_desc': 'From Hefei, Anhui, master student at Beijing Jiaotong University, with research directions in Operations Research and Optimization Analysis, Systems Science and Systems Engineering',
             'team_member3_name': 'Mingjia Wu',
             'team_member3_desc': 'From Taiyuan, Shanxi, graduated from Anhui University of Finance and Economics, pursued as a technology data analyst with research interests in enterprise management, management statistics, and econometrics'
-
-          },
+        }
     };
 
     // DOM Elements
