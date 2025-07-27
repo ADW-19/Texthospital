@@ -4,142 +4,317 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TextHospital - AI Text Detection Based On NLP</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path stroke='%230A2463' stroke-width='2' fill='none' d='M12 2L2 7v10l10 5 10-5V7L12 2z'/><path stroke='%230A2463' stroke-width='2' fill='none' d='M12 12l-5-3M12 12v5M12 12l5-3'/></svg>">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-animation"></div>
-    <div class="language-switcher">
-        <button class="lang-btn active" data-lang="zh-CN">简体</button>
-        <button class="lang-btn" data-lang="zh-TW">繁體</button>
-        <button class="lang-btn" data-lang="en">English</button>
-    </div>
-    <header class="fixed-header">
-        <div class="logo-container">
-            <span class="logo-text">Text</span>
-            <span class="logo-text">Hospital</span>
-            <svg class="logo-icon" viewBox="0 0 24 24">
-                <path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/>
-                <path d="M12 12l-5-3M12 12v5M12 12l5-3"/>
-            </svg>
+    <!-- 粒子背景容器 -->
+    <div id="particles-js"></div>
+    
+    <!-- 主内容容器 -->
+    <div class="main-content">
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#" class="logo-link">
+                    <img src="images/logo.svg" alt="TextHospital Logo" class="logo-icon">
+                    <span class="logo-text">TextHospital-语诊义</span>
+                </a>
+            </div>
+            <nav class="navbar-nav">
+                <a href="#features" class="nav-link" data-translate="nav_features">主要特性</a>
+                <a href="#principles" class="nav-link" data-translate="nav_principles">技术原理</a>
+                <a href="#team" class="nav-link" data-translate="nav_team">研究团队</a>
+            </nav>
+            <div class="navbar-actions">
+                <div class="language-switcher">
+                                    <div class="lang-dropdown">
+                                        <button class="lang-dropdown-btn">
+                                            <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                                <path fill="currentColor" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-2a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-3-7h6v2H9v-2zm3-10a8.003 8.003 0 0 0-6.929 12h13.858A8.003 8.003 0 0 0 12 3z"/>
+                                            </svg>
+                                            <span class="current-lang">lan-语言</span>
+                                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                                                <path fill="currentColor" d="M7 10l5 5 5-5H7z"/>
+                                            </svg>
+                                        </button>
+                                        <div class="lang-dropdown-content">
+                                            <button class="lang-option active" data-lang="zh-CN">简体中文</button>
+                                            <button class="lang-option" data-lang="zh-TW">繁體中文</button>
+                                            <button class="lang-option" data-lang="en">English</button>
+                                            <button class="lang-option" data-lang="fr">Français</button>
+                                            <button class="lang-option" data-lang="es">Español</button>
+                                            <button class="lang-option" data-lang="de">Deutsch</button>
+                                            <button class="lang-option" data-lang="ko">한국어</button>
+                                            <button class="lang-option" data-lang="ja">日本語</button>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
         </div>
     </header>
-    <section class="hero-section">
-        <div class="hero-content">
-            <div class="logo-container hero-logo">
-                <span class="logo-text logo-left">Text</span>
-                <span class="logo-text logo-right">Hospital</span>
-                <svg class="logo-icon" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/>
-                    <path d="M12 12l-5-3M12 12v5M12 12l5-3"/>
-                </svg>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">TextHospital-语诊义</h1>
+                <p class="hero-subtitle" data-translate="hero_subtitle">专业的AI文本检测工具</p>
+                <p class="hero-description" data-translate="hero_description">基于先进的NLP技术，为您提供高精度的AI生成文本检测服务</p>
+                <div class="hero-actions">
+                    <a href="#download" class="btn btn-primary" data-translate="download_btn">下载应用</a>
+                    <a href="#principles" class="btn btn-outline" data-translate="principles_btn">了解原理</a>
+                </div>
             </div>
-            <p class="subtitle">AI Text Detection Lab</p>
-            <div class="button-group">
-                <button class="btn btn-primary">检测原理</button>
-                <button class="btn btn-accent">立即检测</button>
+            <div class="hero-image">
+                <img src="images/hero-image.svg" alt="TextHospital Illustration">
             </div>
         </div>
     </section>
 
-    <main>
-        <section class="detection-area">
-            <div class="input-section">
-                <div class="input-container">
-                    <div class="text-input-wrapper">
-                        <textarea class="text-input" placeholder="输入待检测文本..."></textarea>
-                        <button class="submit-btn">
-                            发送
-                            <svg viewBox="0 0 24 24" width="16" height="16">
-                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
-                            </svg>
-                        </button>
+    <!-- 特性区域 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-translate="features_title">主要特性</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 data-translate="feature1_title">高精度检测</h3>
+                    <p data-translate="feature1_desc">采用先进的NLP技术，检测准确率高达95%以上</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-translate="feature2_title">快速分析</h3>
+                    <p data-translate="feature2_desc">秒级响应，快速分析长文本内容</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">�</div>
+                    <h3 data-translate="feature3_title">隐私保护</h3>
+                    <p data-translate="feature3_desc">本地处理文本，保护您的数据隐私</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 data-translate="feature4_title">详细报告</h3>
+                    <p data-translate="feature4_desc">提供详细的分析报告和可视化结果</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title" data-translate="download_title">下载应用</h2>
+            <p class="section-description" data-translate="download_desc">在您的设备上体验TextHospital的强大功能</p>
+            
+            <div class="download-options">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <svg class="windows-icon" viewBox="0 0 24 24">
+                            <path d="M0,3.5L9.8,2.1V11.4H0V3.5z M10.9,2L23.9,0V11.3H10.9V2z M0,12.4H9.8V21.8L0,20.5V12.4z M10.9,12.5H23.9V24L10.9,22V12.5z"/>
+                        </svg>
                     </div>
-                    <div class="file-upload">
-                        <span>📁</span>
-                        <span>拖放文件到此处</span>
+                    <h3 data-translate="windows_title">Windows 版</h3>
+                    <p data-translate="windows_desc">适用于 Windows 10/11 系统</p>
+                    <a href="#" class="download-btn windows-btn" data-translate="windows_btn">下载 Windows 版</a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <svg class="mobile-icon" viewBox="0 0 24 24">
+                            <path d="M17,1H7C5.9,1,5,1.9,5,3v18c0,1.1,0.9,2,2,2h10c1.1,0,2-0.9,2-2V3C19,1.9,18.1,1,17,1z M17,19H7V5h10V19z"/>
+                            <circle cx="12" cy="22" r="1"/>
+                        </svg>
+                    </div>
+                    <h3 data-translate="mobile_title">移动应用</h3>
+                    <p data-translate="mobile_desc">适用于 iOS 和 Android 设备</p>
+                    <div class="mobile-buttons">
+                        <a href="#" class="download-btn ios-btn" data-translate="ios_btn">iOS 版</a>
+                        <a href="#" class="download-btn android-btn" data-translate="android_btn">Android 版</a>
                     </div>
                 </div>
             </div>
-            <div class="result-section">
-                <div class="result-display">
-                <div class="loading-spinner"></div>
-                    <div class="ai-percentage">
-                        <span class="percentage-value">0</span>%
-                        <p class="default-message">请输入文本进行检测</p>
+        </div>
+    </section>
+
+    <!-- 原理区域 -->
+    <section id="principles" class="principles">
+        <div class="container">
+            <h2 class="section-title" data-translate="principles_title">检测原理</h2>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <h3 data-translate="tech_title">技术原理</h3>
+                    <div class="card-content">
+                        <p data-translate="tech_content"></p>
                     </div>
-                    <div class="visualization"></div>
-                    <div class="highlighted-text"></div>
+                    <a href="Principles/Technical_Principles/index.html" class="detail-link" data-translate="view_details">查看详情</a>
+                </div>
+                <div class="principle-card">
+                    <h3 data-translate="papers_title">相关论文</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li data-translate="paper1"></li>
+                            <li data-translate="paper2"></li>
+                        </ul>
+                    </div>
+                    <a href="Principles/Related_Papers/index.html" class="detail-link" data-translate="view_details">查看详情</a>
+                </div>
+                <div class="principle-card">
+                    <h3 data-translate="achievements_title">比赛成果</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li data-translate="achievement1"></li>
+                            <li data-translate="achievement2"></li>
+                        </ul>
+                    </div>
+                    <a href="Principles/Competition_Achievements/index.html" class="detail-link" data-translate="view_details">查看详情</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- 团队区域 -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title" data-translate="team_title">研究团队</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <h3 data-translate="team_member1_name">王彦祺 (Andy Yanqi Wang)</h3>
+                    <div class="team-content">
+                        <p data-translate="team_member1_desc"></p>
+                    </div>
+                    <a href="person/wyq.html" class="detail-link" data-translate="view_details">查看详情</a>
+                </div>
+                <div class="team-card">
+                    <h3 data-translate="team_member2_name">李宇航 (Yvhang Lee)</h3>
+                    <div class="team-content">
+                        <p data-translate="team_member2_desc"></p>
+                    </div>
+                    <a href="person/lyh.html" class="detail-link" data-translate="view_details">查看详情</a>
+                </div>
+                <div class="team-card">
+                    <h3 data-translate="team_member3_name">武明佳 (Mingjia Wu)</h3>
+                    <div class="team-content">
+                        <p data-translate="team_member3_desc"></p>
+                    </div>
+                    <a href="person/wmj.html" class="detail-link" data-translate="view_details">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="principles-section" id="principles">
-    <h2 data-translate="principles_title">检测原理</h2>
-    <div class="principles-cards">
-        <div class="principle-card">
-            <h3 data-translate="tech_title">技术原理</h3>
-            <div class="card-content">
-                <p data-translate="tech_content"></p>
-            </div>
-            <a href="#" class="detail-link" data-translate="view_details" onclick="window.location.href='Principles/Technical_Principles/index.html'; return false;">查看详情</a>
-        </div>
-        <div class="principle-card">
-            <h3 data-translate="papers_title">相关论文</h3>
-            <div class="card-content">
-                <ul>
-                    <li data-translate="paper1"></li>
-                    <li data-translate="paper2"></li>
-                </ul>
-            </div>
-            <a href="#" class="detail-link" data-translate="view_details" onclick="window.location.href='Principles/Related_Papers/index.html'; return false;">查看详情</a>
-        </div>
-        <div class="principle-card">
-            <h3 data-translate="achievements_title">比赛成果</h3>
-            <div class="card-content">
-                <ul>
-                    <li data-translate="achievement1"></li>
-                    <li data-translate="achievement2"></li>
-                </ul>
-            </div>
-            <a href="#" class="detail-link" data-translate="view_details" onclick="window.location.href='Principles/Competition_Achievements/index.html'; return false;">查看详情</a>
-        </div>
-    </div>
-</section>
-
-<section class="team-section">
-    <h2 data-translate="team_title">研究团队</h2>
-    <div class="team-cards">
-        <div class="team-card">
-            <h3 data-translate="team_member1_name">王彦祺 (Andy Yanqi Wang)</h3>
-            <div class="team-content">
-                <p data-translate="team_member1_desc"></p>
-            </div>
-            <a href="#" class="detail-link" data-translate="view_details" onclick="window.location.href='person/wyq.html'; return false;">查看详情</a>
-        </div>
-        <div class="team-card">
-            <h3 data-translate="team_member2_name">李宇航 (Yvhang Lee)</h3>
-            <div class="team-content">
-                <p data-translate="team_member2_desc"></p>
-            </div>
-            <a href="#" class="detail-link" data-translate="view_details" onclick="window.location.href='person/lyh.html'; return false;">查看详情</a>
-        </div>
-        <div class="team-card">
-            <h3 data-translate="team_member3_name">武明佳</h3>
-            <div class="team-content">
-                <p data-translate="team_member3_desc"></p>
-            </div>
-            <a href="#" class="detail-link" data-translate="view_details" onclick="window.location.href='person/wmj.html'; return false;">查看详情</a>
-        </div>
-    </div>
-</section>
-
+    <!-- 页脚 -->
     <footer class="footer">
-        <p>© 2025 TextHospital AI Detection Lab. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="TextHospital Logo" class="logo-icon">
+                    <span class="logo-text">TextHospital-语诊义</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#features" class="footer-link">技术优势</a>
+                    <a href="#principles" class="footer-link">检测原理</a>
+                    <a href="#team" class="footer-link">研究团队</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 TextHospital AI Detection Lab. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="app.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script>
+        // 初始化粒子背景
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 120,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#0366d6"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#0366d6",
+                    "opacity": 0.6,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 </body>
 </html>
